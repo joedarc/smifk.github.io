@@ -16,4 +16,21 @@
       <img src="./images/captain-smifk.jpg">
     </main><!-- /.container -->
   </body>
+  <script>
+    var sounds = ['./sounds/demonsmifk.mp3', './sounds/leavethisplace.mp3']
+    function start() {
+      var audio = new Audio(sounds[Math.floor(Math.random() * (1 - 0 + 1)) + 0]);
+      audio.play();
+      setTimeout(start, 6000);
+    }
+
+    function partycat() {
+      var audio = new Audio('./sounds/partycat.mp3');
+      audio.play();
+      setTimeout(partycat, 25000);
+    }
+
+    start();
+    partycat();
+  </script>
 </html>
